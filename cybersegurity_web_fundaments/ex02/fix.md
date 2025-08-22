@@ -1,0 +1,4 @@
+Para evitarmos esse tipo de ataque podemos Sanitizar e Validar as Entradas do Usuário: Nunca confie nos dados fornecidos pelo usuário. Valide e sanitize todas as entradas para garantir que não contenham código malicioso.
+Usar Ambientes de Template Seguros (Sandboxing): Muitas template engines, incluindo o Jinja2, oferecem um modo "sandboxed" (ambiente isolado). Este modo restringe o acesso a funções e objetos perigosos, como __globals__ e o módulo os. É crucial configurar e utilizar corretamente o sandboxing.
+Manter o Software Atualizado: Mantenha os frameworks, bibliotecas e a própria template engine sempre atualizados para se beneficiar das últimas correções de segurança.
+Princípio do Menor Privilégio: Execute a aplicação web com um usuário que tenha o mínimo de privilégios necessários para operar. Isso pode limitar o dano que um atacante pode causar caso consiga executar comandos no sistema.

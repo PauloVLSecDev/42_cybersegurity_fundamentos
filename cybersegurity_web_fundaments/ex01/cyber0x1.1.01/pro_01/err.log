@@ -1,0 +1,11 @@
+time="2025-08-20T11:32:48-03:00" level=warning msg="/nfs/homes/pavitor-/cybersegurity_web_fundaments/ex01/cyber0x1.1.01/pro_01/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network pro_01_default  Removing
+ Network pro_01_default  Removed
+time="2025-08-20T11:32:48-03:00" level=warning msg="/nfs/homes/pavitor-/cybersegurity_web_fundaments/ex01/cyber0x1.1.01/pro_01/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ app  Built
+ Network pro_01_default  Creating
+ Network pro_01_default  Created
+ Container pro_01-app-1  Creating
+ Container pro_01-app-1  Created
+ Container pro_01-app-1  Starting
+ Container pro_01-app-1  Started
