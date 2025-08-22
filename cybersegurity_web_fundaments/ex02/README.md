@@ -1,6 +1,3 @@
-Com certeza! Aqui está o seu texto com a ortografia e a gramática corrigidas, além de algumas sugestões para melhorar a clareza:
-
-Texto Corrigido:
 
 Esta vulnerabilidade é uma Server-Side Template Injection (SSTI). O código trata o template criado por frameworks como Django ou Flask (Jinja2) como código executável, não havendo nenhum tipo de validação do input do usuário. Isso permite a injeção de código Python.
 
