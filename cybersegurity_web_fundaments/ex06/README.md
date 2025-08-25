@@ -14,7 +14,7 @@ A exploração "pura" do desafio foi impedida por duas falhas de design na aplic
 
 ### 2.1. Falha 1: Vulnerabilidade Inacessível
 
-O código do oráculo em `test_identity` só era executado se a variável `$_SESSION['id']` estivesse definida. No entanto, esta variável era definida exclusivamente pela função `get_identity`, que por sua vez só era chamada após um login com nome de utilizador e senha bem-sucedido — um caminho impossível no desafio.
+O código do oráculo em `test_identity` só era executado se a variável `$_SESSION['id']` estivesse definida. No entanto, esta variável era definida exclusivamente pela função `get_identity`, que por sua vez só era chamada após um login com nome de utilizador e senha bem-sucedido — um caminho impossível no desafio. Pois a base de dados não continha utilizadores e a exploração de outras vulnerabilidades como SQL Injection estava fora do escopo do desafio.
 
 * **Correção Aplicada:** Alterou-se a verificação em `test_identity` de `$_SESSION['id']` para `$_COOKIE['ID']`. Isto tornou o oráculo acessível, pois o atacante pode controlar os cookies enviados ao servidor.
 
