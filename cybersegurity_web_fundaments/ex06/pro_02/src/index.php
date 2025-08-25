@@ -1,4 +1,5 @@
 <?php
+
 include 'config.php';
 error_reporting(0);
 define("SECRET_KEY", "this_is_key_you_do_not_know");
@@ -29,12 +30,32 @@ function get_identity()
 
 }
 
+	function test_identity()
+{
+   if (!isset($_COOKIE["token"]) || !isset($_COOKIE["ID"])) {
+	    return array();
+	}
+    if (isset($_COOKIE['ID'])) {
+		$c = base64_decode($_COOKIE['ID']);
+		if ($u = openssl_decrypt($c, METHOD, SECRET_KEY, OPENSSL_RAW_DATA, base64_decode($_COOKIE["token"]))) {
+			if ($u === 'admin') {
+				$_SESSION['isadmin'] = true;
+			} else {
+	           $_SESSION['isadmin'] = false;
+			}
+		} else {
+			die("ERROR!");
+		}
+	}
+}
+
+/*
 function test_identity()
 {
     if (!isset($_COOKIE["token"]))
         return array();
-    if (isset($_SESSION['id'])) {
-        $c = base64_decode($_SESSION['id']);
+    if (isset($_SESSION['id'])) {     --> primeira alteracao chave
+        $c = base64_decode($_SESSION['id']);   --> segunda alteracao chave 
         if ($u = openssl_decrypt($c, METHOD, SECRET_KEY, OPENSSL_RAW_DATA, base64_decode($_COOKIE["token"]))) {
             if ($u === 'admin') {
                 $_SESSION['isadmin'] = true;
@@ -44,6 +65,8 @@ function test_identity()
         }
     }
 }
+
+ */
 
 function login($encrypted_pass, $pass)
 {
@@ -123,7 +146,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 } else {
     test_identity();
-    if (isset($_SESSION["id"])) {
+  //  if (isset($_SESSION["id"])) { -- > linha substituiada pela linha abaixo, pois mesmo se $_SESSION['isadmin'] === true,  nunca entrava no if
+	if (isset($_SESSION['isadmin']) && $_SESSION['isadmin'] === true) {
         show_homepage();
     } else {
         need_login();

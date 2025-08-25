@@ -1,11 +1,10 @@
-time="2025-08-22T17:49:37-03:00" level=warning msg="/nfs/homes/pavitor-/all/cybersegurity_web_fundaments/ex06/pro_02/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2025-08-22T17:49:38-03:00" level=warning msg="/nfs/homes/pavitor-/all/cybersegurity_web_fundaments/ex06/pro_02/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
- web Pulling 
- web Warning pull access denied for mine, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
- web  Built
- Network pro_02_default  Creating
- Network pro_02_default  Created
- Container pro_02-web-1  Creating
- Container pro_02-web-1  Created
- Container pro_02-web-1  Starting
- Container pro_02-web-1  Started
+Removing network pro_02_default
+Creating network "pro_02_default" with the default driver
+Building web
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Image for service web was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating pro_02_web_1 ... 
+Creating pro_02_web_1 ... done
