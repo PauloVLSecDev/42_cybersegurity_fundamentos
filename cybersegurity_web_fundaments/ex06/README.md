@@ -80,6 +80,8 @@ O payload foi construído com um script Python para garantir a precisão do cál
 4.  **Payload Resultante:**
     * **Cookie 'ID':** `AAAAAAAAAAAAAAAAAAAAAA==`
     * **Cookie 'token':** `gKENdsXk8OgGoDrSp/JXEQ==`
+  
+# Conclusão
 A captura da flag foi bem-sucedida após a inserção dos cookies gerados no navegador. O desafio provou ser mais complexo do que um simples ataque de *Padding Oracle*,
 exigindo também a identificação e correção de múltiplas falhas de lógica na própria aplicação.
 O processo demonstrou a importância da auditoria de código e da compreensão profunda dos mecanismos de ataque para contornar ambientes de desafio imperfeitos.
